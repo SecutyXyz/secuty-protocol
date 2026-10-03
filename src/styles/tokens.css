@@ -1,0 +1,42 @@
+/*
+  Single home for colour literals (standing rule 4).
+
+  PALETTE PROVENANCE (sampled, not invented)
+  Method: k-means on opaque pixels (deterministic farthest-point seeding, 14 iterations,
+  every 3rd pixel), then each centroid is snapped to the nearest REAL pixel; its source
+  file and (x,y) are given beside each token. Stride-3 grid, origin top-left.
+    brand = brand/LOGO SECUTY PNG.png      (2000x2000, RGBA, alpha always 255; k=6)
+    s1    = reference/SECUTY 1.jpg.jpeg    (1600x900 JPEG slide; k=12)
+  The transparent logo (brand/LOGO SECUTY PNG...png, 94% alpha 0 stored as rgb(0,0,0))
+  was only used for the ink check and for premultiplied resizes in brand/make-assets.mjs.
+  Values with 8 hex digits are a sampled colour plus an alpha, marked "derived".
+*/
+:root {
+  color-scheme: dark;
+  --bg: #080906;            /* brand @ (0,0), 94.5% of pixels */
+  --panel: #0a0b0d;         /* s1 @ (555,0), 14.2% */
+  --raised: #12171b;        /* s1 @ (945,0), 4.0% */
+  --dim: #272b36;           /* s1 @ (516,654) */
+  --line: #494e54;          /* s1 @ (252,408) */
+  --muted: #8c9199;         /* brand @ (1356,1104) */
+  --text: #a9aeb9;          /* brand @ (894,1083) */
+  --ink: #c6cbdb;           /* brand @ (1005,528), the logo stroke colour */
+  --bright: #fafcfb;        /* s1 @ (942,348), wordmark white */
+  --inverse-bg: #c6cbdb;    /* = --ink */
+  --inverse-bg-hover: #fdfdfd; /* s1 @ (1053,342) */
+  --inverse-fg: #080906;    /* = --bg */
+  --veil: #080906f0;        /* derived: --bg at 94% */
+  --scrim: #080906a8;       /* derived: --bg at 66% */
+  --glow: #c6cbdb1a;        /* derived: --ink at 10% */
+  --glow-strong: #c6cbdb4d; /* derived: --ink at 30% */
+  --flash: #fdfdfd47;       /* derived: #fdfdfd at 28% */
+  --grid-dot: #8c919929;    /* derived: --muted at 16% */
+  --skel-a: #12171b;        /* = --raised */
+  --skel-b: #272b36;        /* = --dim */
+  --shadow: #08090659;      /* derived: --bg at 35% */
+  --mask: #080906;          /* alpha-only mask stop, = --bg */
+
+  /* Type: the slides use a wide techno display face that was not supplied as a font file. */
+  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;
+  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+}

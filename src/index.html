@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secuty — Build on Robinhood Chain</title>
+<meta name="description" content="Secuty is a protection protocol for wallets on Robinhood Chain: programmable ownership, sealed credentials, adaptive screening and quantum-resistant signing for people and AI agents.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/logo-192.png">
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/main.css">
+<meta property="og:title" content="Secuty — Build on Robinhood Chain">
+<meta property="og:description" content="Secure the autonomous future.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://secuty.xyz">
+<meta property="og:image" content="https://secuty.xyz/assets/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://secuty.xyz/assets/cover.jpg">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<div class="top" id="top">
+  <div class="ca" id="ca-slot" data-kind="inert">
+    <span class="ca-label">CA</span>
+    <span class="ca-value" id="ca-value">Not announced yet</span>
+  </div>
+  <header>
+    <a class="brand" href="#top" aria-label="Secuty, back to top">
+      <img class="brand-mark" src="/assets/logo-192.png" width="28" height="28" alt="">
+      <span class="brand-word">SECUTY</span>
+    </a>
+    <nav class="nav-main" aria-label="Main">
+      <a href="#pulse">Pulse</a>
+      <a href="#lab">Dry run</a>
+      <a href="#modules">Modules</a>
+      <a href="#stages">Stages</a>
+    </nav>
+    <div class="socials" id="socials"></div>
+  </header>
+</div>
+
+<main>
+  <nav class="nav-sub" aria-label="Sections">
+    <a href="#pulse">Pulse</a>
+    <a href="#lab">Dry run</a>
+    <a href="#modules">Modules</a>
+    <a href="#stages">Stages</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-grid" data-depth="0.12" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <div class="eyebrow stagger" style="--i:0">Build on Robinhood Chain</div>
+      <h1 class="stagger" style="--i:1">Secure the<br>autonomous future.</h1>
+      <p class="stagger" style="--i:2">Secuty is a protection protocol for wallets. Owners write the rules, credentials stay sealed, risk gets screened, and every approved move is signed to outlast tomorrow's computers. People and AI agents share one guarded path.</p>
+    </div>
+    <a href="#pulse" class="pill stagger" style="--i:3" id="pill" data-state="loading">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span id="pill-text">CONNECTING TO CHAIN</span>
+    </a>
+  </section>
+
+  <section class="mq-wrap reveal" aria-label="Robinhood Chain tokens by liquidity">
+    <div class="mq-head"><span class="label">Tokens in motion</span><span class="label">DEXSCREENER / BY LIQUIDITY</span></div>
+    <div class="marquee" id="marquee" data-state="loading">
+      <div class="track" id="mq-track">
+        <div class="mq-item mq-skel" aria-hidden="true"><span class="skel"></span></div>
+        <div class="mq-item mq-skel" aria-hidden="true"><span class="skel"></span></div>
+        <div class="mq-item mq-skel" aria-hidden="true"><span class="skel"></span></div>
+        <div class="mq-item mq-skel" aria-hidden="true"><span class="skel"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="window reveal" aria-label="Guarded path diagram">
+    <div class="window-bar"><span>THE GUARDED PATH</span><span>SECUTY / DESIGN VIEW</span></div>
+    <div class="diagram">
+      <div class="dots" data-depth="-0.05" aria-hidden="true"></div>
+      <button class="node node-top" data-module="credentials" type="button">
+        <span class="node-label">CREDENTIALS <i>[ + ]</i></span>
+        <small>Owner-held identity · eligibility · reputation</small>
+      </button>
+      <div class="link link-v" aria-hidden="true"></div>
+      <div class="lane">
+        <div class="end">OWNER OR AGENT<small>states what it wants</small></div>
+        <div class="link link-h" aria-hidden="true"></div>
+        <button class="node node-gate" data-module="wallet" type="button">
+          <span class="node-label">SECUTY WALLET <i>[ + ]</i></span>
+          <small>Holders · limits · ways back in</small>
+        </button>
+        <div class="link link-h" aria-hidden="true"></div>
+        <div class="end">ROBINHOOD CHAIN<small>only what was cleared</small></div>
+      </div>
+      <div class="tag">QUANTUM-RESISTANT SIGNATURE FOR BIG-TICKET MOVES</div>
+      <div class="link link-v" aria-hidden="true"></div>
+      <div class="pair">
+        <button class="node" data-module="screening" type="button">
+          <span class="node-label">SCREENING <i>[ + ]</i></span>
+          <small>Adaptive risk reading<br>Advice only, never authority</small>
+        </button>
+        <button class="node" data-module="proofs" type="button">
+          <span class="node-label">SEALED PROOFS <i>[ + ]</i></span>
+          <small>Prove a fact, hide the data<br>ZK under the hood</small>
+        </button>
+      </div>
+    </div>
+    <div class="window-foot"><span>└─ Target design · parts arrive in stages</span><span>Pick a node to open it</span></div>
+  </section>
+
+  <section class="section" id="pulse" aria-labelledby="pulse-title">
+    <div class="section-head reveal">
+      <div>
+        <span class="label">Chain pulse</span>
+        <h2 id="pulse-title">The network, right now.</h2>
+      </div>
+      <p>Read straight from public sources while you scroll: the chain's own node, a TVL tracker and a DEX index. Nothing here is a Secuty product metric.</p>
+    </div>
+    <div class="cells reveal" id="cells">
+      <div class="cell" data-state="loading" id="cell-block">
+        <span class="label">Block height</span>
+        <div class="val"><span class="skel" aria-hidden="true"></span><output class="num" id="v-block">—</output></div>
+        <small id="s-block">Waiting on node</small>
+      </div>
+      <div class="cell" data-state="loading" id="cell-gas">
+        <span class="label">Gas price</span>
+        <div class="val"><span class="skel" aria-hidden="true"></span><output class="num" id="v-gas">—</output><span class="unit">gwei</span></div>
+        <small id="s-gas">Waiting on node</small>
+      </div>
+      <div class="cell" data-state="loading" id="cell-tvl">
+        <span class="label">Chain TVL</span>
+        <div class="val"><span class="skel" aria-hidden="true"></span><output class="num" id="v-tvl">—</output></div>
+        <small id="s-tvl">Waiting on DefiLlama</small>
+      </div>
+      <div class="cell" id="cell-id">
+        <span class="label">Chain ID</span>
+        <div class="val"><output class="num" id="v-id">4663</output></div>
+        <small>Fixed by the network</small>
+      </div>
+    </div>
+
+    <div class="pairs reveal" id="pairs" data-state="loading">
+      <div class="pairs-head"><span class="label">Top pairs by liquidity</span><span class="label" id="pairs-scope">CHAIN-WIDE</span></div>
+      <div class="pairs-body" id="pairs-body">
+        <div class="pair-row skel-row" aria-hidden="true"><span class="skel"></span></div>
+        <div class="pair-row skel-row" aria-hidden="true"><span class="skel"></span></div>
+        <div class="pair-row skel-row" aria-hidden="true"><span class="skel"></span></div>
+      </div>
+      <p class="pairs-note" id="pairs-note">Showing the whole chain. Once a contract address is announced, this list narrows to that token.</p>
+    </div>
+  </section>
+
+  <section class="section lab" id="lab" aria-labelledby="lab-title">
+    <div class="lab-head reveal">
+      <div>
+        <span class="label">Dry run</span>
+        <h2 id="lab-title">Walk a request through.</h2>
+      </div>
+      <span class="label">SCRIPTED EXAMPLE / NOTHING MOVES</span>
+    </div>
+    <p class="lab-desc reveal">One wallet, three requests. Switch the request and watch the owner's rules change the ending.</p>
+    <div class="picker" role="group" aria-label="Request type">
+      <button type="button" data-scenario="everyday" aria-pressed="true">Everyday payment</button>
+      <button type="button" data-scenario="agent" aria-pressed="false">Agent overreach</button>
+      <button type="button" data-scenario="large" aria-pressed="false">Large first-time send</button>
+    </div>
+    <div class="lab-work">
+      <div class="request">
+        <span class="label">The request</span>
+        <div class="amount" id="req-amount">250<span>USDC</span></div>
+        <p id="req-desc">A routine payment to an address the owner saved before.</p>
+        <dl class="facts">
+          <div><dt>Destination</dt><dd id="req-dest">Saved contact</dd></div>
+          <div><dt>Rule hit</dt><dd id="req-rule">Under daily ceiling</dd></div>
+          <div><dt>Proof needed</dt><dd id="req-proof">Owner signature</dd></div>
+        </dl>
+        <button type="button" class="run" id="run"><span aria-hidden="true">▷</span><span id="run-label">Start dry run</span></button>
+        <span class="fine">Invented rules and amounts.</span>
+      </div>
+      <div class="trace">
+        <div class="trace-head"><span>CHECKS IN ORDER</span><span id="trace-state">IDLE</span></div>
+        <ol class="stages-list" id="stages-list">
+          <li><span class="light"></span><div><h3>Intent</h3><p>Work out what is being asked.</p></div><span class="st">—</span></li>
+          <li><span class="light"></span><div><h3>Screen</h3><p>Replay it and read the risk.</p></div><span class="st">—</span></li>
+          <li><span class="light"></span><div><h3>Authorize</h3><p>Compare against the owner's rules.</p></div><span class="st">—</span></li>
+          <li><span class="light"></span><div><h3>Outcome</h3><p>Decide whether it may go out.</p></div><span class="st">—</span></li>
+        </ol>
+        <div class="verdict" aria-live="polite" aria-atomic="true">
+          <span class="mark" aria-hidden="true">└─</span>
+          <div><strong id="verdict-title">Nothing run yet</strong><p id="verdict-detail">Pick a request, then start the dry run.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="lab-foot"><span>Models flag. Rules decide.</span></div>
+  </section>
+
+  <section class="section" id="path" aria-labelledby="path-title">
+    <div class="section-head reveal">
+      <div>
+        <span class="label">Request path</span>
+        <h2 id="path-title">Four stops.<br>No shortcuts.</h2>
+      </div>
+      <p>Machines act faster than people can watch. So nothing reaches the chain on a hunch: a request is declared, screened, authorized by fixed rules and only then signed.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal" style="--i:0"><h3>Declare</h3><p>A person, or an AI agent holding a narrow key, says what it wants to do.</p></div>
+      <div class="step reveal" style="--i:1"><h3>Screen</h3><p>The request is replayed in private to learn which assets move and which permissions change.</p></div>
+      <div class="step reveal" style="--i:2"><h3>Authorize</h3><p>Fixed limits and lists answer yes, no, or "show me stronger proof".</p></div>
+      <div class="step reveal" style="--i:3"><h3>Sign</h3><p>Cleared requests are signed and sent. Big-ticket ones demand a quantum-resistant signature.</p></div>
+    </div>
+    <div class="maxim reveal">Models flag <span>─────</span> Rules decide <span>─────</span> Owners hold the keys</div>
+  </section>
+
+  <section class="section" id="modules" aria-labelledby="modules-title">
+    <div class="section-head reveal">
+      <div>
+        <span class="label">Building blocks</span>
+        <h2 id="modules-title">One wallet.<br>Six moving parts.</h2>
+      </div>
+      <p>Each part solves a separate problem and can ship alone. Together they turn a raw request into controlled, approved execution.</p>
+    </div>
+    <div class="rows">
+      <button class="row reveal" type="button" data-module="wallet" style="--i:0"><h3>Wallet</h3><p>Holders, limits and ways back in, written as code for every account.</p><span class="more">[ open ]</span></button>
+      <button class="row reveal" type="button" data-module="credentials" style="--i:1"><h3>Credentials</h3><p>Identity, proofs of eligibility and reputation that the owner carries.</p><span class="more">[ open ]</span></button>
+      <button class="row reveal" type="button" data-module="proofs" style="--i:2"><h3>Sealed proofs</h3><p>ZK checks that confirm a fact without exposing the data behind it.</p><span class="more">[ open ]</span></button>
+      <button class="row reveal" type="button" data-module="screening" style="--i:3"><h3>Screening</h3><p>Adaptive models that read a request and flag danger in plain words.</p><span class="more">[ open ]</span></button>
+      <button class="row reveal" type="button" data-module="agents" style="--i:4"><h3>Agent rails</h3><p>Narrow, expiring keys so an AI agent can act inside limits and nowhere else.</p><span class="more">[ open ]</span></button>
+      <button class="row reveal" type="button" data-module="signatures" style="--i:5"><h3>Future-proof signing</h3><p>Quantum-resistant authorization for the moves that matter most.</p><span class="more">[ open ]</span></button>
+    </div>
+  </section>
+
+  <section class="section" id="stages" aria-labelledby="stages-title">
+    <div class="section-head reveal">
+      <div>
+        <span class="label">Build order</span>
+        <h2 id="stages-title">Foundations first.<br>Extras after.</h2>
+      </div>
+      <p>Stage 01 is being designed now. The rest show the intended order of work, with no promised dates.</p>
+    </div>
+    <div class="timeline">
+      <details class="stage reveal" open><summary><span class="s-no">STAGE 01</span><span class="s-name">Guarded wallet</span><span class="s-state">ACTIVE DESIGN</span></summary><div class="s-body"><ul><li>Owner-set ceilings</li><li>Saved destinations</li><li>Rescue and recovery</li><li>Expiring keys</li><li>Emergency pause</li></ul></div></details>
+      <details class="stage reveal"><summary><span class="s-no">STAGE 02</span><span class="s-name">Screening</span><span class="s-state">QUEUED</span></summary><div class="s-body"><ul><li>Private request replays</li><li>Allowance inspection</li><li>Lookalike contract spotting</li><li>Risk notes in plain words</li><li>Score history per wallet</li></ul></div></details>
+      <details class="stage reveal"><summary><span class="s-no">STAGE 03</span><span class="s-name">Agent rails</span><span class="s-state">QUEUED</span></summary><div class="s-body"><ul><li>Per-agent limits</li><li>Daily spend caps</li><li>App and asset lists</li><li>Keys that retire themselves</li></ul></div></details>
+      <details class="stage reveal"><summary><span class="s-no">STAGE 04</span><span class="s-name">Quantum-resistant signing</span><span class="s-state">QUEUED</span></summary><div class="s-body"><ul><li>Registered backup keys</li><li>Extra proof above a threshold</li><li>Swappable signature schemes</li><li>Rescue with the stronger key</li></ul></div></details>
+      <details class="stage reveal"><summary><span class="s-no">STAGE 05</span><span class="s-name">Credentials and sealed proofs</span><span class="s-state">QUEUED</span></summary><div class="s-body"><ul><li>Owner-held credentials</li><li>Reputation that travels</li><li>Proofs of fit</li><li>One-fact disclosure</li><li>ZK verification</li></ul></div></details>
+      <details class="stage reveal"><summary><span class="s-no">STAGE 06</span><span class="s-name">Builder kit</span><span class="s-state">QUEUED</span></summary><div class="s-body"><ul><li>Libraries for wallets</li><li>Toolkit for AI agents</li><li>Credential toolkit</li><li>Owner console</li></ul></div></details>
+      <details class="stage reveal"><summary><span class="s-no">STAGE 07</span><span class="s-name">Shared watchlist</span><span class="s-state">QUEUED</span></summary><div class="s-body"><ul><li>Community-fed bad-contract list</li><li>Automated sweeps for known flaws</li><li>Live alerts to wallets</li></ul></div></details>
+    </div>
+    <p class="note">Order reflects intent only. No ship dates are set.</p>
+  </section>
+
+  <section class="section" id="first-cut" aria-labelledby="first-title">
+    <div class="section-head reveal">
+      <div>
+        <span class="label">First cut</span>
+        <h2 id="first-title">Start small, prove it.</h2>
+      </div>
+      <p>The first build pairs the guarded wallet with rough versions of the checks. These are goals, not features you can use today.</p>
+    </div>
+    <div class="cut reveal">
+      <div><span class="label">WALLET CORE</span><p>Guarded wallet<br>Expiring keys<br>Send ceilings<br>Saved destinations</p></div>
+      <div><span class="label">EARLY CHECKS</span><p>Request replay<br>Allowance reader<br>Emergency pause<br>Rescue key trial</p></div>
+    </div>
+    <div class="journey reveal"><span>Link wallet</span><b>→</b><span>Open vault</span><b>→</b><span>Set rules</span><b>→</b><span>Fund it</span><b>→</b><span>Use the chain</span></div>
+  </section>
+
+  <section class="closing reveal">
+    <div>
+      <span class="label">Stay close</span>
+      <h2>News will land here first.</h2>
+      <p>Official channels get linked in the top bar the moment they exist. Until then, treat anything claiming to speak for Secuty as unverified.</p>
+    </div>
+    <a class="text-link" href="#top">Back to top ↑</a>
+  </section>
+</main>
+
+<footer>
+  <span>Secuty © 2026</span>
+  <span>secuty.xyz</span>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg-top"><span>SECUTY / INSPECTOR</span><button class="dlg-close" type="button" aria-label="Close details">×</button></div>
+  <div class="dlg-body" id="dlg-body"></div>
+</dialog>
+
+<span class="sr-only" id="announce" role="status" aria-live="polite"></span>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
